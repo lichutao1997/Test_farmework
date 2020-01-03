@@ -2,9 +2,10 @@ import time
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from utils.config import Config ,DATA_PATH# DRIVER_PATH
+from utils.config import Config ,DATA_PATH,REPORT_PATH# DRIVER_PATH,
 from utils.log import logger
 from utils.file_reader import ExcelReader
+from utils.HTMLTestRunner_PY3 import HTMLTestRunner
 
 
 class TestBaiDu(unittest.TestCase):
@@ -40,6 +41,13 @@ class TestBaiDu(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    report_file = REPORT_PATH + '\\report.html'
 
+    testsuite = unittest.TestSuite()
+    testsuite.addTest(unittest.TestLoader().loadTestsFromTestCase(TestBaiDu))
+
+    with open(report_file,'wb') as f:
+        runner = HTMLTestRunner(f,verbosity=2,title='测试报告测试',description='修改html报告')
+        #runner.run(TestBaiDu('test_search'))
+        runner.run(testsuite)
 
