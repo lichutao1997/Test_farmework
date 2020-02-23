@@ -67,12 +67,11 @@ class ExcelReader():
 
 
 if __name__ == '__main__':
-    v = r'C:\Users\LUMI\PycharmProjects\Test_framework\config\config.yml'
+    v = r'E:\Lichutao\PycharmProjects\Test_framework\config\config.yml'
     reader = YamlReader(v)
     print(reader.data)
 
-
-    y = r'C:\Users\LUMI\PycharmProjects\Test_framework\config\baidu.xlsx'
+    y = r'E:\Lichutao\PycharmProjects\Test_framework\config\baidu.xlsx'
     reader = ExcelReader(y,title_line=True)
     print(reader.data)
 

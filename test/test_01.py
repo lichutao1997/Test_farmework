@@ -44,10 +44,13 @@ if __name__ == '__main__':
     report_file = REPORT_PATH + '\\report.html'
 
     testsuite = unittest.TestSuite()
+
+    #把测试用例集传入到testsuite中
     testsuite.addTest(unittest.TestLoader().loadTestsFromTestCase(TestBaiDu))
 
     with open(report_file,'wb') as f:
         runner = HTMLTestRunner(f,verbosity=2,title='测试报告测试',description='修改html报告')
         #runner.run(TestBaiDu('test_search'))
         runner.run(testsuite)
+
 
