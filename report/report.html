@@ -200,9 +200,9 @@
         
     <div class='page-header'>
         <h1>测试报告测试</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2020-01-02 15:33:38</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:14.257903</p>
-<p class='attribute'><strong>状态:</strong> 通过 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2020-03-02 20:37:20</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:00.016044</p>
+<p class='attribute'><strong>状态:</strong> 错误 2</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>修改html报告</p></div>
@@ -233,45 +233,89 @@
             <td>查看</td>
         </tr>
         
-    <tr class='passClass'>
+    <tr class='errorClass'>
         <td>TestBaiDu</td>
         <td>2</td>
+        <td>0</td>
+        <td>0</td>
         <td>2</td>
-        <td>0</td>
-        <td>0</td>
         <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
     </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_search</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_search</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        通过</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        错误</a>
 
-    <div id='div_pt1.1' class="popup_window">
-        <pre>pt1.1: 
-SubTestCase Pass:
-test_search (__main__.TestBaiDu) (data={'search': 'selenium 灰蓝'})</pre>
+    <div id='div_ft1.1' class="popup_window">
+        <pre>ft1.1: 
+SubTestCase Error:
+test_search (__main__.TestBaiDu) (data={'search': 'selenium 灰蓝'})Traceback (most recent call last):
+  File "E:\Lichutao\aasoftware\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "E:\Lichutao\aasoftware\Python37\lib\subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "E:\Lichutao\aasoftware\Python37\lib\subprocess.py", line 1178, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:/Lichutao/PycharmProjects/Test_framework/test/test_01.py", line 34, in test_search
+    self.sub_setUp()
+  File "E:/Lichutao/PycharmProjects/Test_framework/test/test_01.py", line 22, in sub_setUp
+    self.driver = webdriver.Chrome()
+  File "E:\Lichutao\aasoftware\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "E:\Lichutao\aasoftware\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+</pre>
     </div>
     <!--css div popup end-->
 
     </td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_search</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_search</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
-        通过</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        错误</a>
 
-    <div id='div_pt1.2' class="popup_window">
-        <pre>pt1.2: 
-SubTestCase Pass:
-test_search (__main__.TestBaiDu) (data={'search': 'Python selenium'})</pre>
+    <div id='div_ft1.2' class="popup_window">
+        <pre>ft1.2: 
+SubTestCase Error:
+test_search (__main__.TestBaiDu) (data={'search': 'Python selenium'})Traceback (most recent call last):
+  File "E:\Lichutao\aasoftware\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "E:\Lichutao\aasoftware\Python37\lib\subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "E:\Lichutao\aasoftware\Python37\lib\subprocess.py", line 1178, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:/Lichutao/PycharmProjects/Test_framework/test/test_01.py", line 34, in test_search
+    self.sub_setUp()
+  File "E:/Lichutao/PycharmProjects/Test_framework/test/test_01.py", line 22, in sub_setUp
+    self.driver = webdriver.Chrome()
+  File "E:\Lichutao\aasoftware\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "E:\Lichutao\aasoftware\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+</pre>
     </div>
     <!--css div popup end-->
 
@@ -281,9 +325,9 @@ test_search (__main__.TestBaiDu) (data={'search': 'Python selenium'})</pre>
         <tr id='total_row'>
             <td>总计</td>
             <td>2</td>
+            <td>0</td>
+            <td>0</td>
             <td>2</td>
-            <td>0</td>
-            <td>0</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -317,9 +361,9 @@ test_search (__main__.TestBaiDu) (data={'search': 'Python selenium'})</pre>
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:2, name:'通过'},
+                        {value:0, name:'通过'},
                         {value:0, name:'失败'},
-                        {value:0, name:'错误'}
+                        {value:2, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {

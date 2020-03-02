@@ -6,6 +6,7 @@ from utils.config import Config ,DATA_PATH,REPORT_PATH# DRIVER_PATH,
 from utils.log import logger
 from utils.file_reader import ExcelReader
 from utils.HTMLTestRunner_PY3 import HTMLTestRunner
+from utils.mail import Email
 
 
 class TestBaiDu(unittest.TestCase):
@@ -52,5 +53,10 @@ if __name__ == '__main__':
         runner = HTMLTestRunner(f,verbosity=2,title='测试报告测试',description='修改html报告')
         #runner.run(TestBaiDu('test_search'))
         runner.run(testsuite)
-
-
+    e = Email(title='百度测试报告',
+              message='这是今天的测试报告，请查收',
+              receiver='1501141246@qq.com',
+              sender='1342388193@qq.com',
+              password='zksyihyjdrrdggcd',
+              path=report_file)
+    e.send()
